@@ -1,5 +1,5 @@
 import numpy as np
-from random import shuffle
+# from random import shuffle
 # from past.builtins import xrange
 
 def softmax_loss_naive(W, X, y, reg):
@@ -76,6 +76,7 @@ def softmax_loss_vectorized(W, X, y, reg):
   # here, it is easy to run into numeric instability. Don't forget the        #
   # regularization!                                                           #
   #############################################################################
+  N, D = X.shape
   C = W.shape[1]
 
   score = X.dot(W)                # [NxC]
